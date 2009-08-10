@@ -1,0 +1,6 @@
+[submodule "vendor/redcloth-treetop"]
+	path = vendor/redcloth-treetop
+	url = git://github.com/jgarber/redcloth-treetop.git
+[submodule "vendor/redcloth-regexp"]
+	path = vendor/redcloth-regexp
+	url = git://github.com/gaspard/redcloth-regexp.git

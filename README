@@ -1,0 +1,5 @@
+This project just provides a common interface and set of tests for comparing prototypes of the next version of RedCloth with each other and with the current version of RedCloth.
+
+Candidates include:
+* redcloth-regexp, by Gaspard Bucher
+* redcloth-treetop, by Jason Garber
