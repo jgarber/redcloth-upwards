@@ -4,6 +4,10 @@ REDCLOTH_FLAVORS.each do |flavor|
   desc "Use the #{flavor.capitalize} version of RedCloth"
   task flavor do
     ENV['REDCLOTH_FLAVOR'] = REDCLOTH_FLAVOR = flavor
+    ARGV.delete(REDCLOTH_FLAVOR)
+    if ARGV.empty?
+      Rake::Task[:spec].invoke
+    end
   end
 end
 
