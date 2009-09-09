@@ -30,6 +30,11 @@ describe RedCloth do
     html "<p><strong>Pay attention to <em>this</em></strong>.</p>"
   end
   
+  it "should parse link inside bold" do
+    text %{I use *"Google":http://www.google.com*, not Bing}
+    html %{<p>I use <strong><a href="http://www.google.com">Google</a></strong>, not Bing</p>}
+  end
+  
   it "should leave certain punctuation off the end of links" do
     text %Q{Read about "Textile":http://en.wikipedia.org/wiki/Textile_(markup_language) or "try it out":http://redcloth.org/try-redcloth/!}
     html "<p>Read about <a href=\"http://en.wikipedia.org/wiki/Textile_(markup_language)\">Textile</a> or <a href=\"http://redcloth.org/try-redcloth/\">try it out</a>!</p>"
